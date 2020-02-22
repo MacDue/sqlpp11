@@ -39,7 +39,7 @@ namespace sqlpp
   struct verbatim_t : public expression_operators<verbatim_t<ValueType>, ValueType>,
                       public alias_operators<verbatim_t<ValueType>>
   {
-    using _traits = make_traits<ValueType, tag::is_expression>;
+    using _traits = make_traits<ValueType, /*Hack*/tag::is_sort_order, tag::is_expression>;
     using _nodes = detail::type_vector<>;
     using _can_be_null =
         std::true_type;  // since we do not know what's going on inside the verbatim, we assume it can be null
