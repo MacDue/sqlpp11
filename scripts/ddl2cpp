@@ -289,6 +289,7 @@ types = {
     'int unsigned': 'integer_unsigned', #MYSQL
     'bigint unsigned': 'bigint_unsigned', #MYSQL
     'mediumint unsigned' : 'integer', #MYSQL
+    'int4range' : 'varchar', # PostgreSQL (a hack since setting syntax is same as strings)
     }
 
 if failOnParse:
